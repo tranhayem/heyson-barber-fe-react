@@ -1,5 +1,7 @@
+import Box from "@mui/material/Box";
+
 function App() {
-  return <></>;
+  return <Box></Box>;
 }
 
 export default App;

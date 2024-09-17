@@ -4,8 +4,20 @@ const theme = extendTheme({
   heySonCustom: {},
 
   colorSchemes: {
-    light: {},
-    dark: {},
+    light: {
+      palette: {
+        highlight: {
+          main: "#ce5e46",
+        },
+      },
+    },
+    dark: {
+      palette: {
+        highlight: {
+          main: "#ce5e46",
+        },
+      },
+    },
   },
 
   components: {},

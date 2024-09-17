@@ -13,11 +13,11 @@ import { useCallback, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Logo = styled("img")(({ theme }) => ({
-  height: "40px",
+  height: "80%",
   marginRight: "16px",
   transition: "filter 0.3s ease",
   "&:hover": {
-    filter: `drop-shadow(0 0 10px ${theme.palette.highlight.main})`,
+    filter: `drop-shadow(0 0 10px ${theme.heySonCustom.palette.highlightColor})`,
   },
 }));
 
@@ -58,10 +58,10 @@ const Header = () => {
         padding: "16px",
         backgroundColor:
           location.pathname === to
-            ? (theme) => theme.palette.highlight.main
+            ? (theme) => theme.heySonCustom.palette.highlightColor
             : "transparent",
         "&:hover": {
-          backgroundColor: (theme) => theme.palette.highlight.main,
+          backgroundColor: (theme) => theme.heySonCustom.palette.highlightColor,
         },
       }}
     >
@@ -70,11 +70,38 @@ const Header = () => {
   ));
 
   return (
-    <AppBar position="static">
-      <Container>
-        <Toolbar>
-          <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
-            <Link to="/">
+    <AppBar
+      position="static"
+      sx={{
+        height: (theme) => theme.heySonCustom.appBarHeight,
+      }}
+    >
+      <Container
+        sx={{
+          height: "100%",
+        }}
+      >
+        <Toolbar
+          sx={{
+            height: "100%",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              flexGrow: 1,
+              height: "100%",
+            }}
+          >
+            <Link
+              to="/"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                height: "100%",
+              }}
+            >
               <Logo src="/static/favicons/logo.png" alt="HeySon Logo" />
             </Link>
 
@@ -104,7 +131,8 @@ const Header = () => {
                       height: "2px",
                       transform: "scaleX(0)",
                       transition: "transform 0.3s ease",
-                      backgroundColor: (theme) => theme.palette.highlight.main,
+                      backgroundColor: (theme) =>
+                        theme.heySonCustom.palette.highlightColor,
                     },
                     "&.active::after, &:hover::after": {
                       transform: "scaleX(1)",
@@ -124,7 +152,7 @@ const Header = () => {
               >
                 <MenuIcon
                   sx={{
-                    color: (theme) => theme.palette.highlight.main,
+                    color: (theme) => theme.heySonCustom.palette.highlightColor,
                     fontSize: "2rem",
                   }}
                 />

@@ -58,14 +58,14 @@ export default function Footer() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              alignItems: { xs: "center", sm: "flex-start" },
+              alignItems: "center",
               gap: 2,
               flex: 1,
             }}
           >
             <Box
               sx={{
-                width: "70%",
+                width: { xs: "40%", sm: "80%" },
               }}
             >
               <Link
@@ -84,7 +84,11 @@ export default function Footer() {
                 direction="row"
                 spacing={1}
                 useFlexGap
-                sx={{ marginTop: 2, justifyContent: "center" }}
+                sx={{
+                  marginTop: 2,
+                  justifyContent: "center",
+                  flexWrap: { xs: "none", sm: "wrap" },
+                }}
               >
                 {barberInfo.social.map(({ social_name, social_url }) => (
                   <IconButton

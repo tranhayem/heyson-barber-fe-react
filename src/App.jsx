@@ -45,7 +45,10 @@ function App() {
         <Header />
         <Box
           component="main"
-          sx={{ minHeight: (theme) => theme.heySonCustom.mainHeight }}
+          sx={{
+            marginTop: (theme) => theme.heySonCustom.appBarHeight,
+            minHeight: (theme) => theme.heySonCustom.mainHeight,
+          }}
         >
           <Component />
         </Box>

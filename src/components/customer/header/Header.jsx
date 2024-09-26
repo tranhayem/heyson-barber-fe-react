@@ -62,7 +62,7 @@ const Header = () => {
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       sx={{
         height: (theme) => theme.heySonCustom.appBarHeight,
       }}
@@ -98,7 +98,7 @@ const Header = () => {
 
             <Box sx={{ flexGrow: 1 }} />
 
-            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <Box sx={{ display: { xs: "none", sm: "flex" } }}>
               {buttons.map(({ to, label }) => (
                 <Button
                   key={to}
@@ -135,7 +135,7 @@ const Header = () => {
               ))}
             </Box>
 
-            <Box sx={{ display: { xs: "flex", md: "none" } }}>
+            <Box sx={{ display: { xs: "flex", sm: "none" } }}>
               <IconButton
                 edge="start"
                 aria-label="menu"

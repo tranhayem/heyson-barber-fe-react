@@ -43,7 +43,10 @@ function App() {
     ) : (
       <>
         <Header />
-        <Box component="main">
+        <Box
+          component="main"
+          sx={{ minHeight: (theme) => theme.heySonCustom.mainHeight }}
+        >
           <Component />
         </Box>
         <Footer />

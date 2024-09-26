@@ -7,19 +7,10 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 
-import { styled } from "@mui/material/styles";
-
 import { useCallback, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const Logo = styled("img")(({ theme }) => ({
-  height: "80%",
-  marginRight: "16px",
-  transition: "filter 0.3s ease",
-  "&:hover": {
-    filter: `drop-shadow(0 0 10px ${theme.heySonCustom.palette.highlightColor})`,
-  },
-}));
+import Logo from "~/components/logo/Logo";
 
 const Header = () => {
   const location = useLocation();
@@ -102,7 +93,7 @@ const Header = () => {
                 height: "100%",
               }}
             >
-              <Logo src="/static/favicons/logo.png" alt="HeySon Logo" />
+              <Logo />
             </Link>
 
             <Box sx={{ flexGrow: 1 }} />

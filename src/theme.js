@@ -1,7 +1,7 @@
 import { extendTheme } from "@mui/material/styles";
 
 const APP_BAR_HEIGHT = "60px";
-const FOOTER_HEIGHT = "240px";
+const FOOTER_HEIGHT = "280px";
 const MAIN_HEIGHT = `calc(100vh - ${APP_BAR_HEIGHT} - ${FOOTER_HEIGHT})`;
 
 const theme = extendTheme({

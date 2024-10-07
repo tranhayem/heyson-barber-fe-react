@@ -10,7 +10,7 @@ import Toolbar from "@mui/material/Toolbar";
 import { useCallback, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import Logo from "~/components/logo/Logo";
+import Logo from "~/components/custom/logo/Logo";
 
 const Header = () => {
   const location = useLocation();
@@ -46,7 +46,7 @@ const Header = () => {
       sx={{
         width: "100%",
         justifyContent: "flex-start",
-        padding: "16px",
+        p: "16px",
         backgroundColor:
           location.pathname === to
             ? (theme) => theme.heySonCustom.palette.highlightColor
@@ -111,7 +111,7 @@ const Header = () => {
                   onMouseOver={() => setHovered(true)}
                   onMouseOut={() => setHovered(false)}
                   sx={{
-                    marginX: 1,
+                    mx: 1,
                     position: "relative",
                     "&::after": {
                       content: '""',

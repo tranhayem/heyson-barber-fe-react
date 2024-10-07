@@ -14,8 +14,8 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 import barberInfo from "~/api/mock/barberInfo";
-import Logo from "~/components/logo/Logo";
-import TikTokIcon from "../icons/TikTokIcon";
+import TikTokIcon from "~/components/custom/icons/TikTokIcon";
+import Logo from "~/components/custom/logo/Logo";
 
 function Copyright() {
   return (
@@ -85,7 +85,7 @@ export default function Footer() {
                 spacing={1}
                 useFlexGap
                 sx={{
-                  marginTop: 2,
+                  mt: 2,
                   justifyContent: "center",
                   flexWrap: { xs: "none", sm: "wrap" },
                 }}
@@ -138,6 +138,10 @@ export default function Footer() {
                 color: (theme) => theme.heySonCustom.palette.highlightColor,
                 textTransform: "uppercase",
                 textAlign: "center",
+                "&:hover": {
+                  filter: (theme) =>
+                    `drop-shadow(0 0 10px ${theme.heySonCustom.palette.highlightColor})`,
+                },
               }}
             >
               {barberInfo.barber_name}

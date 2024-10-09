@@ -13,7 +13,7 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
-import barberInfo from "~/api/mock/barberInfo";
+import barberInfo from "~/api/mock/barberData";
 import TikTokIcon from "~/components/custom/icons/TikTokIcon";
 import Logo from "~/components/custom/logo/Logo";
 
@@ -90,34 +90,35 @@ export default function Footer() {
                   flexWrap: { xs: "none", sm: "wrap" },
                 }}
               >
-                {barberInfo.social.map(({ social_name, social_url }) => (
-                  <IconButton
-                    key={social_name}
-                    size="small"
-                    href={social_url}
-                    aria-label={social_name}
-                    sx={{
-                      alignSelf: "center",
-                      "&:hover": {
-                        backgroundColor:
-                          {
-                            Facebook: "#3b5998",
-                            Youtube: "#FF0000",
-                            Email: "#EA4335",
-                            Instagram: "#E4405F",
-                            X: "#1DA1F2",
-                          }[social_name] || "#000000",
-                      },
-                    }}
-                  >
-                    {social_name === "Facebook" && <FacebookIcon />}
-                    {social_name === "Youtube" && <YouTubeIcon />}
-                    {social_name === "Email" && <EmailIcon />}
-                    {social_name === "TikTok" && <TikTokIcon />}
-                    {social_name === "Instagram" && <InstagramIcon />}
-                    {social_name === "X" && <XIcon />}
-                  </IconButton>
-                ))}
+                {barberInfo.social &&
+                  barberInfo.social.map(({ social_name, social_url }) => (
+                    <IconButton
+                      key={social_name}
+                      size="small"
+                      href={social_url}
+                      aria-label={social_name}
+                      sx={{
+                        alignSelf: "center",
+                        "&:hover": {
+                          backgroundColor:
+                            {
+                              Facebook: "#3b5998",
+                              Youtube: "#FF0000",
+                              Email: "#EA4335",
+                              Instagram: "#E4405F",
+                              X: "#1DA1F2",
+                            }[social_name] || "#000000",
+                        },
+                      }}
+                    >
+                      {social_name === "Facebook" && <FacebookIcon />}
+                      {social_name === "Youtube" && <YouTubeIcon />}
+                      {social_name === "Email" && <EmailIcon />}
+                      {social_name === "TikTok" && <TikTokIcon />}
+                      {social_name === "Instagram" && <InstagramIcon />}
+                      {social_name === "X" && <XIcon />}
+                    </IconButton>
+                  ))}
               </Stack>
             </Box>
           </Box>
@@ -138,10 +139,8 @@ export default function Footer() {
                 color: (theme) => theme.heySonCustom.palette.highlightColor,
                 textTransform: "uppercase",
                 textAlign: "center",
-                "&:hover": {
-                  filter: (theme) =>
-                    `drop-shadow(0 0 10px ${theme.heySonCustom.palette.highlightColor})`,
-                },
+                filter: (theme) =>
+                  `drop-shadow(0 0 10px ${theme.heySonCustom.palette.highlightColor})`,
               }}
             >
               {barberInfo.barber_name}
@@ -194,6 +193,7 @@ export default function Footer() {
                 </Typography>
 
                 {title === "Dịch vụ" &&
+                  barberInfo.services &&
                   barberInfo.services.map(({ service_name, url }) => (
                     <Link
                       key={service_name}
@@ -206,6 +206,7 @@ export default function Footer() {
                   ))}
 
                 {title === "HeySon Shop" &&
+                  barberInfo.products &&
                   barberInfo.products.map(({ product_name, url }) => (
                     <Link
                       key={product_name}

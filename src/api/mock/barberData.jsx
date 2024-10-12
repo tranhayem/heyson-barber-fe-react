@@ -2,7 +2,7 @@ export const about = {
   title: "Giới thiệu về chúng tôi",
   content: `Bạn đang cần tìm địa chỉ uy tín để đảm bảo an toàn cho cái đầu của bạn? đừng lo, có chúng tôi, đầu bạn tròn hay méo, béo hay gầy thì thầy cũng cân tất.
         Với kinh nghiệm 100 năm cạo đầu, tôi đảm bảo đầu bạn bóng loáng hơn đèn pha ô tô
-        Chúng tôi đã tìm ra và đưa ra đư��ng d��n đầy đ�� cho bạn, giúp bạn d�� dàng tìm đâu đó.
+        Chúng tôi đã tìm ra và đưa ra đưng dn đầy đ cho bạn, giúp bạn d dàng tìm đâu đó.
       `,
   video_url:
     "https://www.youtube.com/watch?v=sR5Z8AJ-zRU&ab_channel=MFHCoding%26Design",
@@ -129,5 +129,113 @@ const barberInfo = {
   ],
   products: [{ product_name: "Sáp vuốt tóc" }, { product_name: "Gôm xịt tóc" }],
 };
+
+export const barberService = [
+  {
+    service_type_name: "Cắt tóc tạo kiểu",
+    service_data: [
+      {
+        name: "Cắt tóc tạo kiểu",
+        description: "Cắt tóc tạo kiểu từ đầu đến cuối, thi gian: 15 phút",
+        price: 100000,
+        image_url: "/static/favicons/logo.png",
+      },
+      {
+        name: "Cạo đầu",
+        description: "Cắt tóc tạo kiểu từ đầu đến cuối, thi gian: 15 phút",
+        price: 100000,
+        image_url: "/static/favicons/logo.png",
+      },
+    ],
+  },
+  {
+    service_type_name: "Nhuộm tóc",
+    service_data: [
+      {
+        name: "Cạo đầu",
+        description: "Cắt tóc tạo kiểu từ đầu đến cuối, thi gian: 15 phút",
+        price: 100000,
+        image_url: "/static/favicons/logo.png",
+      },
+      {
+        name: "Chặt đầu",
+        description: "Cắt tóc tạo kiểu từ đầu đến cuối, thi gian: 15 phút",
+        price: 100000,
+        image_url: "/static/favicons/logo.png",
+      },
+    ],
+  },
+  {
+    service_type_name: "Gội đầu",
+    service_data: [
+      {
+        name: "Gội đầu thường",
+        description: "Gội đầu với dầu gội tự nhiên, thời gian: 20 phút",
+        price: 50000,
+        image_url: "/static/favicons/logo.png",
+      },
+      {
+        name: "Gội đầu massage",
+        description: "Gội đầu kết hợp massage, thời gian: 30 phút",
+        price: 80000,
+        image_url: "/static/favicons/logo.png",
+      },
+    ],
+  },
+];
+
+export const barberShop = [
+  {
+    product_type_name: "Gôm xịt tóc",
+    product_data: [
+      {
+        name: "Gôm xịt tóc A",
+        description: "Gôm xịt tóc giữ nếp lâu, dung tích: 200ml",
+        price: 100000,
+        image_url: "/static/favicons/logo.png",
+      },
+      {
+        name: "Gôm xịt tóc B",
+        description: "Gôm xịt tóc tạo kiểu tự nhiên, dung tích: 250ml",
+        price: 120000,
+        image_url: "/static/favicons/logo.png",
+      },
+    ],
+  },
+  {
+    product_type_name: "Thuốc nhuộm tóc",
+    product_data: [
+      {
+        name: "Nhuộm tóc màu nâu",
+        description: "Thuốc nhuộm tóc màu nâu tự nhiên, bền màu.",
+        price: 150000,
+        image_url: "/static/favicons/logo.png",
+      },
+      {
+        name: "Nhuộm tóc màu đen",
+        description: "Thuốc nhuộm tóc màu đen, an toàn cho tóc.",
+        price: 140000,
+        image_url: "/static/favicons/logo.png",
+      },
+    ],
+  },
+  {
+    product_type_name: "Sáp vuốt tóc",
+    product_data: [
+      {
+        name: "Sáp vuốt tóc A",
+        description: "Sáp vuốt tóc giữ nếp mạnh, dễ tạo kiểu.",
+        price: 80000,
+        image_url: "/static/favicons/logo.png",
+      },
+      {
+        name: "Sáp vuốt tóc B",
+        description: "Sáp vuốt tóc mềm mại, tự nhiên.",
+        price: 90000,
+        image_url: "/static/favicons/logo.png",
+      },
+    ],
+  },
+];
 
 export default barberInfo;

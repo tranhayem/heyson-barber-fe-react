@@ -19,7 +19,19 @@ const theme = extendTheme({
     dark: true,
   },
 
-  components: {},
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        ".react-multiple-carousel__arrow--left": {
+          left: "2%",
+        },
+
+        ".react-multiple-carousel__arrow--right": {
+          right: "2%",
+        },
+      },
+    },
+  },
 });
 
 export default theme;

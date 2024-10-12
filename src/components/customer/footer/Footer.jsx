@@ -31,7 +31,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        height: (theme) => theme.heySonCustom.footerHeight,
+        minHeight: (theme) => theme.heySonCustom.footerHeight,
       }}
     >
       <Divider />

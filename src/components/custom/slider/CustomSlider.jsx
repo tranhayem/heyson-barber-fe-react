@@ -92,18 +92,6 @@ function CustomSlider({ items }) {
                       </Typography>
                     )}
 
-                    {item.nickname && (
-                      <Typography
-                        sx={{ textAlign: "center", fontWeight: "bold" }}
-                      >
-                        {item.nickname}
-                      </Typography>
-                    )}
-
-                    {item.description && (
-                      <Typography>{item.description}</Typography>
-                    )}
-
                     {item.name && item.price && (
                       <Box
                         sx={{
@@ -140,6 +128,18 @@ function CustomSlider({ items }) {
                           {item.price}
                         </Typography>
                       </Box>
+                    )}
+
+                    {item.nickname && (
+                      <Typography
+                        sx={{ textAlign: "center", fontWeight: "bold" }}
+                      >
+                        {item.nickname}
+                      </Typography>
+                    )}
+
+                    {item.description && (
+                      <Typography>{item.description}</Typography>
                     )}
                   </CardContent>
                 )}

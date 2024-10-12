@@ -1,7 +1,34 @@
-import Box from "@mui/material/Box";
+import { Box, Container } from "@mui/material";
+import {
+  About,
+  Banner,
+  BarberList,
+  ProductTypeList,
+  ServiceTypeList,
+  AchievementList,
+  CustomerList,
+} from "~/components/customer/home";
+
+const components = [
+  Banner,
+  About,
+  ServiceTypeList,
+  ProductTypeList,
+  BarberList,
+  AchievementList,
+  CustomerList,
+];
 
 function Home() {
-  return <Box>Home</Box>;
+  return (
+    <Container>
+      {components.map((Component, index) => (
+        <Box key={index}>
+          <Component />
+        </Box>
+      ))}
+    </Container>
+  );
 }
 
 export default Home;

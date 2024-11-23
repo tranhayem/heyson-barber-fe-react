@@ -21,6 +21,7 @@ const Header = () => {
     { to: "/", label: "Trang chủ" },
     { to: "/services", label: "Dịch Vụ" },
     { to: "/products", label: "HeySon Shop" },
+    { to: "/price-list", label: "Bảng giá" },
   ];
 
   const toggleDrawer = useCallback(

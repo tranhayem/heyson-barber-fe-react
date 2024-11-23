@@ -1,3 +1,5 @@
+import Box from "@mui/material/Box";
+
 import { useState } from "react";
 import {
   Navigate,
@@ -22,10 +24,10 @@ import ServiceTypeManagement from "./pages/admin/services/ServiceTypeManagement"
 import StaffManagement from "./pages/admin/staff/StaffManagement";
 
 import Home from "./pages/customer/home/Home";
+import PriceList from "./pages/customer/priceList/PriceList";
 import Products from "./pages/customer/products/Products";
 import Services from "./pages/customer/services/Services";
 import NotFound from "./pages/NotFound";
-import { Box } from "@mui/material";
 
 function App() {
   const [loggedIn] = useState(false);
@@ -63,6 +65,7 @@ function App() {
         <Route path="/" element={renderPage(Home)} />
         <Route path="/products" element={renderPage(Products)} />
         <Route path="/services" element={renderPage(Services)} />
+        <Route path="/price-list" element={renderPage(PriceList)} />
 
         <Route
           path="/admin/login"

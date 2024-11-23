@@ -7,7 +7,7 @@ import {
   ServiceTypeList,
   AchievementList,
   CustomerList,
-} from "~/components/customer/home";
+} from "~/components/home";
 
 const components = [
   Banner,
